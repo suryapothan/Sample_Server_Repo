@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Name" type="xsd:string"/>
+  <xsd:element name="Type" type="xsd:string"/>
+  <xsd:element name="COLLEGEINFO">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Det"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Det">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Type"/>
+        <xsd:element ref="Students"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Students">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Name"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

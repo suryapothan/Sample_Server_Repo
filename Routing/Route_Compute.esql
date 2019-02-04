@@ -1,0 +1,19 @@
+
+
+CREATE COMPUTE MODULE Route_Compute
+		--CALL CopyEntireMessage();
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	
+	BEGIN
+
+		
+		IF InputRoot.XMLNSC.COLLEGEINFO.Det.Type = 'CSC' THEN
+   SET OutputLocalEnvironment.Destination.RouterList.DestinationData[1].labelName = 'CSC';
+		ELSE 
+   SET OutputLocalEnvironment.Destination.RouterList.DestinationData[1].labelName = 'ECE';
+END IF;
+		RETURN TRUE;
+	END;
+END MODULE;
+
+
